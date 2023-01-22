@@ -11,7 +11,7 @@ const login_password = localStorage.getItem("login_password");
 
 window.onload = function () {
   if ((login_email, login_password === null)) {
-    alert("Login first!!");
+    alert("You need to create account to create new post");
     window.location = "/pages/log-in.html";
     return false;
   }
