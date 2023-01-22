@@ -22,7 +22,7 @@ function renderPosts(posts, parent = cardContainer) {
 
   const fragmentPost = document.createDocumentFragment();
 
-  posts.forEach((post) => {
+  posts.reverse().forEach((post) => {
     const template = templateCard.cloneNode(true);
     template.setAttribute("id", `card-${post.id}`);
 
@@ -30,9 +30,7 @@ function renderPosts(posts, parent = cardContainer) {
     const author = domSelector(".author", template);
     const date = domSelector(".date", template);
     const description = domSelector(".description", template);
-    // const article = domSelector(".text-article", template);
     const image = domSelector("img", template);
-    // const readMoreBtn = domSelector(".read-more-btn", template);
 
     const convertedDate = convertDate(post.createdAt);
 
@@ -54,15 +52,15 @@ function renderPosts(posts, parent = cardContainer) {
   parent.appendChild(fragmentPost);
 }
 
-posts.forEach(function (post) {
-  //...
-  const readMoreBtn = domSelector(`#card-${post.id} .read-more-btn`);
-  readMoreBtn.addEventListener("click", function (event) {
-    var textData = post.article;
-    alert(textData);
-  });
-  //...
-});
+// posts.forEach(function (post) {
+//   //...
+//   const readMoreBtn = domSelector(`#card-${post.id} .read-more-btn`);
+//   readMoreBtn.addEventListener("click", function (event) {
+//     var textData = post.article;
+//     alert(textData);
+//   });
+//   //...
+// });
 
 /*Modal.js*/
 

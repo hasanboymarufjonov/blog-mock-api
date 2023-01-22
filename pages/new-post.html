@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/form.css" />
+  </head>
+  <body>
+    <a href="/index.html">All Posts</a>
+    <form id="post-form">
+      <div>
+        <label for="image">Upload Image:</label>
+        <input type="name" id="image" name="image" />
+      </div>
+      <div>
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" />
+      </div>
+      <div>
+        <label for="author">Author:</label>
+        <input type="text" id="author" name="author" />
+      </div>
+      <div>
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" />
+      </div>
+      <div>
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description" />
+      </div>
+      <div>
+        <label for="article">Article:</label>
+        <textarea id="article" name="article"></textarea>
+      </div>
+      <div>
+        <button
+          type="submit"
+          style="background-color: #0088cc; box-shadow: 2px 2px 5px #ccc"
+        >
+          Publish
+        </button>
+      </div>
+    </form>
+    <script type="module" src="/js/post.js"></script>
+    <script src="/js/check.js"></script>
+  </body>
+</html>
