@@ -31,7 +31,7 @@ postForm.addEventListener("submit", (e) => {
     .then((res) => res.json())
     .then((data) => {
       alert("Post published");
-      window.location.href = "http://127.0.0.1:5500/index.html";
+      window.location = "/index.html";
       postForm.reset();
     })
     .catch((err) => alert("Error.."));
