@@ -2,7 +2,7 @@ import { domSelector } from "../utils/domSelector.js";
 
 const postForm = domSelector("#post-form");
 
-let dateNow = new Date().toJSON();
+let dateNow = new Date().toJSON().slice(0, 10);
 
 postForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -11,8 +11,16 @@ postForm.addEventListener("submit", (e) => {
   const author = e.target.author.value;
   const description = e.target.description.value;
   const article = e.target.article.value;
-  const image = e.target.image.value;
-  const date = e.target.date.value;
+  let image = e.target.image.value;
+  let date = e.target.date.value;
+
+  if (image === "") {
+    image =
+      "https://img.freepik.com/free-vector/oops-404-error-with-broken-robot-concept-illustration_114360-5529.jpg?w=2000";
+  }
+  if (date === "") {
+    date = dateNow;
+  }
 
   const post = {
     title: title,
