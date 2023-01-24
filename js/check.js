@@ -7,7 +7,6 @@ const login_password = localStorage.getItem("login_password");
 
 // const user_login = document.getElementById("user-login");
 // const logout_button = document.getElementById("logout-btn");
-// const delete_button = document.getElementById("delete-btn");
 
 window.onload = function () {
   if ((login_email, login_password === null)) {
@@ -29,17 +28,8 @@ window.onload = function () {
   //   }
 };
 
-logout_button.addEventListener("click", function () {
-  localStorage.removeItem("login_email");
-  localStorage.removeItem("login_password");
-  window.location = "/pages/log-in.html";
-});
-
-delete_button.addEventListener("click", function () {
-  localStorage.removeItem("register_name");
-  localStorage.removeItem("register_email");
-  localStorage.removeItem("register_password");
-  localStorage.removeItem("login_email");
-  localStorage.removeItem("login_password");
-  window.location = "/pages/sign-in.html";
-});
+// logout_button.addEventListener("click", function () {
+//   localStorage.removeItem("login_email");
+//   localStorage.removeItem("login_password");
+//   window.location = "/pages/log-in.html";
+// });

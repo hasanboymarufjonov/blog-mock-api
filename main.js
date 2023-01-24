@@ -4,6 +4,19 @@ import { convertDate } from "./utils/convertDate.js";
 const cardContainer = domSelector(".card-container");
 const templateCard = domSelector(".card");
 
+const toLogin = domSelector("#login-signup");
+
+const check_log_email = localStorage.getItem("login_email");
+const check_log_password = localStorage.getItem("login_password");
+
+if ((check_log_email, check_log_password != null)) {
+  toLogin.textContent = "Log out";
+  localStorage.removeItem("login_email");
+  localStorage.removeItem("login_password");
+}
+
+toLogin.addEventListener("click", function () {});
+
 let posts = [];
 
 fetch("https://63ca7efdf36cbbdfc7598588.mockapi.io/posts")
@@ -45,7 +58,7 @@ function renderPosts(posts, parent = cardContainer) {
     const readMoreBtn = domSelector(".read-more-btn", template);
     readMoreBtn.setAttribute("data-text", post.article);
 
-    console.log(template);
+    // console.log(template);
     fragmentPost.appendChild(template);
   });
 
