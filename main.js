@@ -11,11 +11,12 @@ const check_log_password = localStorage.getItem("login_password");
 
 if ((check_log_email, check_log_password != null)) {
   toLogin.textContent = "Log out";
-  localStorage.removeItem("login_email");
-  localStorage.removeItem("login_password");
 }
 
-toLogin.addEventListener("click", function () {});
+toLogin.addEventListener("click", function () {
+  localStorage.removeItem("login_email");
+  localStorage.removeItem("login_password");
+});
 
 let posts = [];
 
